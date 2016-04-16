@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<configuration>
+    <system>
+        <ichange>
+            <privatekey>security/server</privatekey>
+            <privatepassword>inetec</privatepassword>
+            <jdbcs>
+                <jdbc value="private_test" desc="test">
+                    <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+                    <dburl>jdbc:oracle:thin:@192.168.0.101:1521:inetec</dburl>
+                    <dbowner>wxh</dbowner>
+                    <dbhost>192.168.0.101</dbhost>
+                    <dbvender>ORACLE</dbvender>
+                    <dbtype>oracle</dbtype>
+                    <dbuser>wxh</dbuser>
+                    <password>R47bSHFCXq0=</password>
+                    <encoding>UTF-8</encoding>
+                </jdbc>
+                <jdbc value="private_mssql" desc="test_mssql">
+                    <driverclass>net.sourceforge.jtds.jdbc.Driver</driverclass>
+                    <dburl>jdbc:jtds:sqlserver://192.168.0.100:1433/dbchangedb</dburl>
+                    <dbowner>dbo</dbowner>
+                    <dbhost>192.168.0.100</dbhost>
+                    <dbvender>JTDS</dbvender>
+                    <dbtype>mssql</dbtype>
+                    <dbuser>sa</dbuser>
+                    <password>tId81B9Ht1w=</password>
+                    <encoding>UTF-8</encoding>
+                </jdbc>
+                <jdbc value="private_sybase" desc="test_sybase">
+                    <driverclass>net.sourceforge.jtds.jdbc.Driver</driverclass>
+                    <dburl>jdbc:jtds:sybase://192.168.0.100:5003/inetecdb</dburl>
+                    <dbowner>dbo</dbowner>
+                    <dbhost>192.168.0.100</dbhost>
+                    <dbvender>SYBASE</dbvender>
+                    <dbtype>sybase</dbtype>
+                    <dbuser>sa</dbuser>
+                    <password>yskaCtytfMk=</password>
+                    <encoding>UTF-8</encoding>
+                </jdbc>
+                <jdbc value="in_sql" desc="">
+                    <driverclass>net.sourceforge.jtds.jdbc.Driver</driverclass>
+                    <dburl>jdbc:jtds:sqlserver://192.168.0.101:1433/test</dburl>
+                    <dbowner>dbo</dbowner>
+                    <dbhost>192.168.0.101</dbhost>
+                    <dbvender>JTDS</dbvender>
+                    <dbtype>mssql</dbtype>
+                    <dbuser>sa</dbuser>
+                    <password>tId81B9Ht1w=</password>
+                    <encoding>UTF-8</encoding>
+                </jdbc>
+            </jdbcs>
+            <types>
+                <type value="test" desc="test">
+                    <isactive>false</isactive>
+                    <islocal>false</islocal>
+                    <isrecover>true</isrecover>
+                    <datapath>c:/ichange/dest</datapath>
+                    <deletefile>true</deletefile>
+                    <plugin>
+                        <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+                        <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+                        <sourceplugin>
+                            <dbchange>
+                                <database name="private_test">
+                                    <oldstep>false</oldstep>
+                                    <operation>entirely</operation>
+                                    <enable>true</enable>
+                                    <temptable/>
+                                    <maxrecords>100</maxrecords>
+                                    <interval>60</interval>
+                                    <istwoway>false</istwoway>
+                                    <tables>
+                                        <table value="T_DBSYNC">
+                                            <monitordelete>false</monitordelete>
+                                            <monitorupdate>false</monitorupdate>
+                                            <monitorinsert>false</monitorinsert>
+                                            <seqnumber>1</seqnumber>
+                                            <interval>60</interval>
+                                            <mergetables>
+                                                <mergetable name="tablename1">
+                                                    <mergefields>
+                                                        <mergefield name="ID2">id1</mergefield>
+                                                    </mergefields>
+                                                </mergetable>
+                                                <mergetable name="tablename2">
+                                                    <mergefields>
+                                                        <mergefield name="ID2">id2</mergefield>
+                                                    </mergefields>
+                                                </mergetable>
+                                            </mergetables>
+                                            <fields>
+                                                <field value="T_ID">
+                                                    <JDBC_TYPE>NUMERIC</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>22</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>NUMBER</DB_TYPE>
+                                                </field>
+                                                <field value="T_VARCHAR">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>true</IS_PK>
+                                                    <COLUMN_SIZE>40</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>VARCHAR2</DB_TYPE>
+                                                </field>
+                                                <field value="T_DATE">
+                                                    <JDBC_TYPE>DATE</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>7</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>DATE</DB_TYPE>
+                                                </field>
+                                                <field value="T_BLOB">
+                                                    <JDBC_TYPE>BLOB</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>4000</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>BLOB</DB_TYPE>
+                                                </field>
+                                                <field value="T_CLOB">
+                                                    <JDBC_TYPE>CLOB</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>4000</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>CLOB</DB_TYPE>
+                                                </field>
+                                            </fields>
+                                        </table>
+                                    </tables>
+                                </database>
+                            </dbchange>
+                        </sourceplugin>
+                    </plugin>
+                </type>
+                <type value="test_sql" desc="test_Sql">
+                    <isactive>true</isactive>
+                    <islocal>false</islocal>
+                    <isrecover>true</isrecover>
+                    <datapath>c:/ichange/dest</datapath>
+                    <deletefile>true</deletefile>
+                    <plugin>
+                        <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+                        <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+                        <sourceplugin>
+                            <dbchange>
+                                <database name="private_mssql">
+                                    <oldstep>false</oldstep>
+                                    <operation>trigger</operation>
+                                    <enable>true</enable>
+                                    <temptable>test_sql</temptable>
+                                    <maxrecords>100</maxrecords>
+                                    <interval>120</interval>
+                                    <istwoway>false</istwoway>
+                                    <tables>
+                                        <table value="t_dbsync">
+                                            <monitordelete>true</monitordelete>
+                                            <monitorupdate>true</monitorupdate>
+                                            <monitorinsert>true</monitorinsert>
+                                            <seqnumber>1</seqnumber>
+                                            <interval>120</interval>
+                                            <mergetables></mergetables>
+                                            <fields>
+                                                <field value="t_char">
+                                                    <JDBC_TYPE>CHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>50</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>char</DB_TYPE>
+                                                </field>
+                                                <field value="t_datetime">
+                                                    <JDBC_TYPE>TIMESTAMP</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>23</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>datetime</DB_TYPE>
+                                                </field>
+                                                <field value="t_int">
+                                                    <JDBC_TYPE>INTEGER</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>int</DB_TYPE>
+                                                </field>
+                                                <field value="t_text">
+                                                    <JDBC_TYPE>CLOB</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>2147483647</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>text</DB_TYPE>
+                                                </field>
+                                                <field value="t_varchar">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>true</IS_PK>
+                                                    <COLUMN_SIZE>40</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                            </fields>
+                                        </table>
+                                    </tables>
+                                </database>
+                            </dbchange>
+                        </sourceplugin>
+                    </plugin>
+                </type>
+                <type value="test_sybase" desc="testsybase">
+                    <isactive>false</isactive>
+                    <islocal>false</islocal>
+                    <isrecover>true</isrecover>
+                    <datapath>c:/ichange/dest</datapath>
+                    <deletefile>true</deletefile>
+                    <plugin>
+                        <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+                        <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+                        <sourceplugin>
+                            <dbchange>
+                                <database name="private_sybase">
+                                    <oldstep>false</oldstep>
+                                    <operation>entirely</operation>
+                                    <enable>true</enable>
+                                    <temptable/>
+                                    <maxrecords>100</maxrecords>
+                                    <interval>120</interval>
+                                    <istwoway>false</istwoway>
+                                    <tables>
+                                        <table value="test_tab">
+                                            <monitordelete>true</monitordelete>
+                                            <monitorupdate>true</monitorupdate>
+                                            <monitorinsert>true</monitorinsert>
+                                            <seqnumber>1</seqnumber>
+                                            <interval>120</interval>
+                                            <mergetables>
+                                                <mergetable name="tablename1">
+                                                    <mergefields>
+                                                        <mergefield name="ID2">id1</mergefield>
+                                                    </mergefields>
+                                                </mergetable>
+                                                <mergetable name="tablename2">
+                                                    <mergefields>
+                                                        <mergefield name="ID2">id2</mergefield>
+                                                    </mergefields>
+                                                </mergetable>
+                                            </mergetables>
+                                            <fields>
+                                                <field value="t_id">
+                                                    <JDBC_TYPE>INTEGER</JDBC_TYPE>
+                                                    <IS_PK>true</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>int</DB_TYPE>
+                                                </field>
+                                                <field value="t_varchar">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_date">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>date</DB_TYPE>
+                                                </field>
+                                                <field value="t_var1">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_var2">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_var3">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_var4">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_var5">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                            </fields>
+                                        </table>
+                                    </tables>
+                                </database>
+                            </dbchange>
+                        </sourceplugin>
+                    </plugin>
+                </type>
+                <type value="test_type" desc="test">
+                    <isactive>true</isactive>
+                    <islocal>false</islocal>
+                    <isrecover>true</isrecover>
+                    <datapath>c:/ichange/dest</datapath>
+                    <deletefile>true</deletefile>
+                    <plugin>
+                        <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+                        <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+                        <sourceplugin>
+                            <dbchange>
+                                <database name="private_sybase">
+                                    <oldstep>false</oldstep>
+                                    <operation>entirely</operation>
+                                    <enable>true</enable>
+                                    <temptable/>
+                                    <maxrecords>100</maxrecords>
+                                    <interval>120</interval>
+                                    <istwoway>false</istwoway>
+                                    <tables>
+                                        <table value="t_dbsync">
+                                            <monitordelete>false</monitordelete>
+                                            <monitorupdate>false</monitorupdate>
+                                            <monitorinsert>false</monitorinsert>
+                                            <seqnumber>1</seqnumber>
+                                            <interval>120</interval>
+                                            <fields>
+                                                <field value="t_binary">
+                                                    <JDBC_TYPE>BINARY</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>255</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>binary</DB_TYPE>
+                                                </field>
+                                                <field value="t_char">
+                                                    <JDBC_TYPE>CHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>20</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>char</DB_TYPE>
+                                                </field>
+                                                <field value="t_datetime">
+                                                    <JDBC_TYPE>TIMESTAMP</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>23</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>datetime</DB_TYPE>
+                                                </field>
+                                                <field value="t_decimal">
+                                                    <JDBC_TYPE>DECIMAL</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>decimal</DB_TYPE>
+                                                </field>
+                                                <field value="t_float">
+                                                    <JDBC_TYPE>DOUBLE</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>15</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>double precis</DB_TYPE>
+                                                </field>
+                                                <field value="t_image">
+                                                    <JDBC_TYPE>BLOB</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>2147483647</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>image</DB_TYPE>
+                                                </field>
+                                                <field value="t_money">
+                                                    <JDBC_TYPE>DECIMAL</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>19</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>money</DB_TYPE>
+                                                </field>
+                                                <field value="t_nchar">
+                                                    <JDBC_TYPE>CHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>20</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>char</DB_TYPE>
+                                                </field>
+                                                <field value="t_nvarchar">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>20</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_real">
+                                                    <JDBC_TYPE>REAL</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>7</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>real</DB_TYPE>
+                                                </field>
+                                                <field value="t_smalldatetime">
+                                                    <JDBC_TYPE>TIMESTAMP</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>16</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>smalldatetime</DB_TYPE>
+                                                </field>
+                                                <field value="t_smallint">
+                                                    <JDBC_TYPE>SMALLINT</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>5</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>smallint</DB_TYPE>
+                                                </field>
+                                                <field value="t_smallmoney">
+                                                    <JDBC_TYPE>DECIMAL</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>smallmoney</DB_TYPE>
+                                                </field>
+                                                <field value="t_text">
+                                                    <JDBC_TYPE>CLOB</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>2147483647</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>text</DB_TYPE>
+                                                </field>
+                                                <field value="t_tinyint">
+                                                    <JDBC_TYPE>TINYINT</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>3</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>tinyint</DB_TYPE>
+                                                </field>
+                                                <field value="t_varbinary">
+                                                    <JDBC_TYPE>VARBINARY</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>255</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>varbinary</DB_TYPE>
+                                                </field>
+                                                <field value="t_varchar">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>true</IS_PK>
+                                                    <COLUMN_SIZE>40</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_int">
+                                                    <JDBC_TYPE>INTEGER</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>int</DB_TYPE>
+                                                </field>
+                                                <field value="t_numeric">
+                                                    <JDBC_TYPE>NUMERIC</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>9</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>numeric</DB_TYPE>
+                                                </field>
+                                            </fields>
+                                        </table>
+                                    </tables>
+                                </database>
+                            </dbchange>
+                        </sourceplugin>
+                    </plugin>
+                </type>
+                <type value="sql-sybase" desc="sql-sybase">
+                    <isactive>false</isactive>
+                    <islocal>false</islocal>
+                    <isrecover>true</isrecover>
+                    <datapath>c:/ichange/dest</datapath>
+                    <deletefile>true</deletefile>
+                    <plugin>
+                        <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+                        <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+                        <sourceplugin>
+                            <dbchange>
+                                <database name="in_sql">
+                                    <oldstep>false</oldstep>
+                                    <operation>entirely</operation>
+                                    <enable>true</enable>
+                                    <temptable/>
+                                    <maxrecords>10</maxrecords>
+                                    <interval>120</interval>
+                                    <istwoway>false</istwoway>
+                                    <tables>
+                                        <table value="t_dbsync">
+                                            <monitordelete>false</monitordelete>
+                                            <monitorupdate>false</monitorupdate>
+                                            <monitorinsert>false</monitorinsert>
+                                            <seqnumber>1</seqnumber>
+                                            <interval>120</interval>
+                                            <fields>
+                                                <field value="t_binary">
+                                                    <JDBC_TYPE>BINARY</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1000</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>binary</DB_TYPE>
+                                                </field>
+                                                <field value="t_char">
+                                                    <JDBC_TYPE>CHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>50</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>char</DB_TYPE>
+                                                </field>
+                                                <field value="t_datetime">
+                                                    <JDBC_TYPE>TIMESTAMP</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>23</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>datetime</DB_TYPE>
+                                                </field>
+                                                <field value="t_decimal">
+                                                    <JDBC_TYPE>DECIMAL</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>decimal</DB_TYPE>
+                                                </field>
+                                                <field value="t_float">
+                                                    <JDBC_TYPE>DOUBLE</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>53</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>float</DB_TYPE>
+                                                </field>
+                                                <field value="t_image">
+                                                    <JDBC_TYPE>BLOB</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>2147483647</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>image</DB_TYPE>
+                                                </field>
+                                                <field value="t_int">
+                                                    <JDBC_TYPE>INTEGER</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>int</DB_TYPE>
+                                                </field>
+                                                <field value="t_money">
+                                                    <JDBC_TYPE>DECIMAL</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>19</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>money</DB_TYPE>
+                                                </field>
+                                                <field value="t_nchar">
+                                                    <JDBC_TYPE>CHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>50</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>nchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_numeric">
+                                                    <JDBC_TYPE>NUMERIC</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>numeric</DB_TYPE>
+                                                </field>
+                                                <field value="t_nvarchar">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>50</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>nvarchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_real">
+                                                    <JDBC_TYPE>REAL</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>24</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>real</DB_TYPE>
+                                                </field>
+                                                <field value="t_smalldatetime">
+                                                    <JDBC_TYPE>TIMESTAMP</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>16</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>smalldatetime</DB_TYPE>
+                                                </field>
+                                                <field value="t_smallint">
+                                                    <JDBC_TYPE>SMALLINT</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>5</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>smallint</DB_TYPE>
+                                                </field>
+                                                <field value="t_smallmoney">
+                                                    <JDBC_TYPE>DECIMAL</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>smallmoney</DB_TYPE>
+                                                </field>
+                                                <field value="t_text">
+                                                    <JDBC_TYPE>CLOB</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>2147483647</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>text</DB_TYPE>
+                                                </field>
+                                                <field value="t_tinyint">
+                                                    <JDBC_TYPE>TINYINT</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>3</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>tinyint</DB_TYPE>
+                                                </field>
+                                                <field value="t_varbinary">
+                                                    <JDBC_TYPE>VARBINARY</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1024</COLUMN_SIZE>
+                                                    <IS_NULL>true</IS_NULL>
+                                                    <DB_TYPE>varbinary</DB_TYPE>
+                                                </field>
+                                                <field value="t_varchar">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>true</IS_PK>
+                                                    <COLUMN_SIZE>40</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                            </fields>
+                                        </table>
+                                    </tables>
+                                </database>
+                            </dbchange>
+                        </sourceplugin>
+                    </plugin>
+                </type>
+                <type value="sybase" desc="sybase">
+                    <isactive>true</isactive>
+                    <islocal>false</islocal>
+                    <isrecover>true</isrecover>
+                    <datapath>c:/ichange/dest</datapath>
+                    <deletefile>true</deletefile>
+                    <plugin>
+                        <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+                        <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+                        <sourceplugin>
+                            <dbchange>
+                                <database name="private_sybase">
+                                    <oldstep>false</oldstep>
+                                    <operation>flag</operation>
+                                    <enable>true</enable>
+                                    <temptable></temptable>
+                                    <maxrecords>100</maxrecords>
+                                    <interval>120</interval>
+                                    <istwoway>false</istwoway>
+                                    <tables>
+                                        <table value="test_tab">
+                                            <monitordelete>false</monitordelete>
+                                            <monitorupdate>false</monitorupdate>
+                                            <monitorinsert>false</monitorinsert>
+                                            <seqnumber>1</seqnumber>
+                                            <interval>120</interval>
+                                            <fields>
+                                                <field value="t_id">
+                                                    <JDBC_TYPE>INTEGER</JDBC_TYPE>
+                                                    <IS_PK>true</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>int</DB_TYPE>
+                                                </field>
+                                                <field value="t_varchar">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_date">
+                                                    <JDBC_TYPE>DATE</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>10</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>date</DB_TYPE>
+                                                </field>
+                                                <field value="t_var1">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_var2">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_var3">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_var4">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                                <field value="t_var5">
+                                                    <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                                                    <IS_PK>false</IS_PK>
+                                                    <COLUMN_SIZE>1</COLUMN_SIZE>
+                                                    <IS_NULL>false</IS_NULL>
+                                                    <DB_TYPE>varchar</DB_TYPE>
+                                                </field>
+                                            </fields>
+                                        </table>
+                                    </tables>
+                                </database>
+                            </dbchange>
+                        </sourceplugin>
+                    </plugin>
+                </type>
+                <type value="sybase" desc="sybase">
+                    <isactive>true</isactive>
+                    <plugin>
+                        <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+                        <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+                        <sourceplugin>
+                            <dbchange>
+                            </dbchange>
+                        </sourceplugin>
+                    </plugin>
+                </type>
+            </types>
+            <channel>
+                <type>https</type>
+                <ipaddress>192.168.0.100</ipaddress>
+                <privated>true</privated>
+                <targetpath>c:/ichange/dest</targetpath>
+                <port>8060</port>
+                <sourcepath>c:/ichange/src</sourcepath>
+                <interval>1000</interval>
+            </channel>
+            <ichangeutils>
+                <gcinterval>10</gcinterval>
+                <recover>10</recover>
+                <systemmeantime>300</systemmeantime>
+                <logserverport>8090</logserverport>
+            </ichangeutils>
+        </ichange>
+    </system>
+</configuration>

@@ -1,0 +1,696 @@
+<?Exml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE preferences SYSTEM 'http://java.sun.com/dtd/preferences.dtd'>
+<preferences EExTERNAL_ExML_VERSION="1.0">
+    <root type="system">
+        <map/>
+        <node name="datacollection">
+            <map/>
+            <node name="systemsupport">
+                <map/>
+                <node name="datarecover">
+                    <map>
+                        <entry key="autoRecover" value="true"/>
+                        <entry key="startTime" value="12:00:00"/>
+                    </map>
+                </node>
+                <node name="jdbc">
+                    <map>
+                        <entry key="dbServerVender" value="mysql"/>
+                        <entry key="driverClass" value="org.gjt.mm.mysql.Driver"/>
+                        <entry key="driverUrl" value="jdbc:mysql://engsvr01:3306/recover"/>
+                        <entry key="dbHost" value="eng-019"/>
+                        <entry key="dbName" value="recover"/>
+                        <entry key="dbUser" value="root"/>
+                        <entry key="password" value=""/>
+                    </map>
+                </node>
+            </node>
+            <node name="types">
+                <map/>
+                <node name="tr">
+                    <map/>
+                    <node name="ioadapter">
+                        <map/>
+                        <node name="inputadapter">
+                            <map>
+                                <entry key="classname" value="com.inetec.ichange.plugin.dbchange.DbChangeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSource"/>
+                            </map>
+                            <node name="config">
+                                <map/>
+                                <node name="dbsync">
+                                    <map/>
+                                    <node name="DBSYNC1">
+                                        <map>
+                                            <entry key="interval" value="1"/>
+                                            <entry key="enable" value="true"/>
+                                            <entry key="maExrecords" value="100"/>
+                                            <entry key="dbtype" value="oracle"/>
+                                            <entry key="delete" value="false"/>
+                                            <entry key="specifyflag" value="true"/>
+                                            <entry key="triggerenable" value="true"/>
+                                            <entry key="oldstep" value="true"/>
+                                        </map>
+                                        <node name="tables">
+                                            <map/>
+                                            <node name="BLOBTABLE">
+                                                <map>
+                                                  <entry key="delete" value="false"/>
+                                                  <entry key="specifyflag" value="true"/>
+                                                  <entry key="triggerenable" value="true"/>
+                                                  <entry key="specifyfields" value="true"/>
+                                                  <entry key="sequence" value="1"/>
+                                                  <entry key="monitorinsert" value="false"/>
+                                                  <entry key="monitorupdate" value="false"/>
+                                                  <entry key="monitordelete" value="true"/>
+                                                </map>
+                                                <node name="fields">
+                                                  <map/>
+                                                  <node name="bigint">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="bigint"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="TRUE"/>
+                                                  <entry key="IS_NULLABLE" value="FALSE"/>
+                                                  <entry key="JDBC_TYPE" value="BIGINT"/>
+                                                  <entry key="DB_TYPE" value="bigint"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="binary">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="binary"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="BINARY"/>
+                                                  <entry key="DB_TYPE" value="binary"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="char">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="char"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="CHAR"/>
+                                                  <entry key="DB_TYPE" value="char"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="datetime">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="datetime"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="TIMESTAMP"/>
+                                                  <entry key="DB_TYPE" value="datetime"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="decimal">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="decimal"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="DECIMAL"/>
+                                                  <entry key="DB_TYPE" value="decimal"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="float">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="float"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="FLOAT"/>
+                                                  <entry key="DB_TYPE" value="float"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="image">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="image"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="LONGVARBINARY"/>
+                                                  <entry key="DB_TYPE" value="image"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="int">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="int"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="INTEGER"/>
+                                                  <entry key="DB_TYPE" value="int"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="money">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="money"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="DECIMAL"/>
+                                                  <entry key="DB_TYPE" value="money"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="numeric">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="numeric"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="NUMERIC"/>
+                                                  <entry key="DB_TYPE" value="numeric"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="IpAddress">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="IpAddress"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="CHAR"/>
+                                                  <entry key="DB_TYPE" value="char"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="real">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="real"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="REAL"/>
+                                                  <entry key="DB_TYPE" value="real"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="smalldatetime">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="smalldatetime"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="TIMESTAMP"/>
+                                                  <entry key="DB_TYPE" value="smalldatetime"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="smallint">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="smallint"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="SMALLINT"/>
+                                                  <entry key="DB_TYPE" value="smallint"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="smallmoney">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="smallmoney"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="DECIMAL"/>
+                                                  <entry key="DB_TYPE" value="smallmoney"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="sql_variant">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="sql_variant"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="VARCHAR"/>
+                                                  <entry key="DB_TYPE" value="sql_variant"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="text">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="text"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="LONGVARCHAR"/>
+                                                  <entry key="DB_TYPE" value="text"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="timestamp">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="timestamp"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="BINARY"/>
+                                                  <entry key="DB_TYPE" value="timestamp"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="tinyint">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="tinyint"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="TINYINT"/>
+                                                  <entry key="DB_TYPE" value="tinyint"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="uniqueidentifier">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="uniqueidentifier"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="CHAR"/>
+                                                  <entry key="DB_TYPE" value="uniqueidentifier"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="varbinary">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="varbinary"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="VARBINARY"/>
+                                                  <entry key="DB_TYPE" value="varbinary"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="varchar">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="varchar"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="VARCHAR"/>
+                                                  <entry key="DB_TYPE" value="varchar"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="int_identity">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="int_identity"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="INTEGER"/>
+                                                  <entry key="DB_TYPE" value="int_identity"/>
+                                                  </map>
+                                                  </node>
+                                                </node>
+                                            </node>
+                                        </node>
+                                        <node name="jdbc">
+                                            <map>
+                                                <entry key="dbServerVender" value="sql2k"/>
+                                                <entry key="driverClass" value="net.sourceforge.jtds.jdbc.Driver"/>
+                                                <entry key="driverUrl" value="jdbc:jtds:sqlserver:/10.71.0.50:1433/dbsync1;TDS=8.0;"/>
+                                                <entry key="dbHost" value=""/>
+                                                <entry key="dbName" value="dbsync1"/>
+                                                <entry key="dbUser" value="sa"/>
+                                                <entry key="password" value="password"/>
+                                            </map>
+                                        </node>
+                                    </node>
+                                </node>
+                            </node>
+                        </node>
+                        <node name="outputadapter">
+                            <map>
+                                <entry key="classname" value="com.inetec.ichange.plugin.dbchange.DbChangeTarget"/>
+                            </map>
+                            <node name="config">
+                                <map/>
+                                <node name="dbsync">
+                                    <map/>
+                                    <node name="DBSYNC1">
+                                        <map>
+                                            <entry key="enable" value="true"/>
+                                        </map>
+                                        <node name="tables">
+                                            <map/>
+                                            <node name="BLOBTABLE">
+                                                <map/>
+                                                <node name="DBSYNC2">
+                                                  <map/>
+                                                  <node name="BLOBTABLE">
+                                                  <map>
+                                                  <entry key="deleteenable" value="true"/>
+                                                  <entry key="specifyfields" value="true"/>
+                                                  </map>
+                                                  <node name="fields">
+                                                  <map/>
+                                                  <node name="bigint">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="bigint"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="TRUE"/>
+                                                  <entry key="IS_NULLABLE" value="FALSE"/>
+                                                  <entry key="JDBC_TYPE" value="BIGINT"/>
+                                                  <entry key="DB_TYPE" value="bigint"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="binary">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="binary"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="BINARY"/>
+                                                  <entry key="DB_TYPE" value="binary"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="char">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="char"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="CHAR"/>
+                                                  <entry key="DB_TYPE" value="char"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="datetime">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="datetime"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="TIMESTAMP"/>
+                                                  <entry key="DB_TYPE" value="datetime"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="decimal">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="decimal"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="DECIMAL"/>
+                                                  <entry key="DB_TYPE" value="decimal"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="float">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="float"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="FLOAT"/>
+                                                  <entry key="DB_TYPE" value="float"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="image">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="image"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="LONGVARBINARY"/>
+                                                  <entry key="DB_TYPE" value="image"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="int">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="int"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="INTEGER"/>
+                                                  <entry key="DB_TYPE" value="int"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="money">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="money"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="DECIMAL"/>
+                                                  <entry key="DB_TYPE" value="money"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="numeric">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="numeric"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="NUMERIC"/>
+                                                  <entry key="DB_TYPE" value="numeric"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="IpAddress">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="IpAddress"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="CHAR"/>
+                                                  <entry key="DB_TYPE" value="char"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="real">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="real"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="REAL"/>
+                                                  <entry key="DB_TYPE" value="real"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="smalldatetime">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="smalldatetime"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="TIMESTAMP"/>
+                                                  <entry key="DB_TYPE" value="smalldatetime"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="smallint">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="smallint"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="SMALLINT"/>
+                                                  <entry key="DB_TYPE" value="smallint"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="smallmoney">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="smallmoney"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="DECIMAL"/>
+                                                  <entry key="DB_TYPE" value="smallmoney"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="sql_variant">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="sql_variant"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="VARCHAR"/>
+                                                  <entry key="DB_TYPE" value="sql_variant"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="text">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="text"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="LONGVARCHAR"/>
+                                                  <entry key="DB_TYPE" value="text"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="timestamp">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="timestamp"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="BINARY"/>
+                                                  <entry key="DB_TYPE" value="timestamp"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="tinyint">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="tinyint"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="TINYINT"/>
+                                                  <entry key="DB_TYPE" value="tinyint"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="uniqueidentifier">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="uniqueidentifier"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="CHAR"/>
+                                                  <entry key="DB_TYPE" value="uniqueidentifier"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="varbinary">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="varbinary"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="VARBINARY"/>
+                                                  <entry key="DB_TYPE" value="varbinary"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="varchar">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="varchar"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="VARCHAR"/>
+                                                  <entry key="DB_TYPE" value="varchar"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="int_identity">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="int_identity"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="INTEGER"/>
+                                                  <entry key="DB_TYPE" value="int_identity"/>
+                                                  </map>
+                                                  </node>
+                                                  </node>
+                                                  </node>
+                                                </node>
+                                            </node>
+                                        </node>
+                                    </node>
+                                    <node name="targetdatabases">
+                                        <map/>
+                                        <node name="DBSYNC2">
+                                            <map>
+                                                <entry key="triggerenable" value="false"/>
+                                            </map>
+                                            <node name="jdbc">
+                                                <map>
+                                                  <entry key="dbServerVender" value="sql2k"/>
+                                                  <entry key="driverClass" value="net.sourceforge.jtds.jdbc.Driver"/>
+                                                  <entry key="driverUrl" value="jdbc:jtds:sqlserver:/10.71.0.50:1433/dbsync2;TDS=8.0;"/>
+                                                  <entry key="dbHost" value=""/>
+                                                  <entry key="dbName" value=""/>
+                                                  <entry key="dbUser" value="sa"/>
+                                                  <entry key="password" value="password"/>
+                                                </map>
+                                            </node>
+                                        </node>
+                                    </node>
+                                </node>
+                            </node>
+                        </node>
+                    </node>
+                </node>
+            </node>
+        </node>
+    </root>
+</preferences>

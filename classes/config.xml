@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration> 
+  <system> 
+    <ichange> 
+      <privatekey>security/server</privatekey>  
+      <privatepassword>inetec</privatepassword>  
+      <jdbcs> 
+        <!--<jdbc value="target_sql2008" desc="target_sql2008">
+          <dbtype>mssql</dbtype>  
+          <dbvender>JTDS</dbvender>  
+          <dbcatalog/>  
+          <dburl>jdbc:jtds:sqlserver://192.168.1.4:1433/target</dburl>  
+          <dbowner>dbo</dbowner>  
+          <dbhost>192.168.1.4</dbhost>  
+          <driverclass>net.sourceforge.jtds.jdbc.Driver</driverclass>  
+          <dbuser>sa</dbuser>  
+          <password>S8W2gMnH8VWiT9pXRMPQxA==</password>  
+          <encoding>utf-8</encoding> 
+        </jdbc>-->
+        <jdbc value="test_se_s" desc="xulie">
+          <dbtype>oracle</dbtype>
+          <dbvender>ORACLE</dbvender>
+          <dbcatalog/>
+          <dburl>jdbc:oracle:thin:@192.168.1.220:1521:ORCL220</dburl>
+          <dbowner>test#</dbowner>
+          <dbhost>192.168.1.220</dbhost>
+          <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+          <dbuser>test#</dbuser>
+          <password>Jc0i4rAjl78=</password>
+          <encoding>utf-8</encoding>
+        </jdbc>
+        <jdbc value="test_se_t" desc="xulie">
+          <dbtype>oracle</dbtype>
+          <dbvender>ORACLE</dbvender>
+          <dbcatalog/>
+          <dburl>jdbc:oracle:thin:@192.168.1.225:1521:ORCL225</dburl>
+          <dbowner>test#</dbowner>
+          <dbhost>192.168.1.225</dbhost>
+          <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+          <dbuser>test#</dbuser>
+          <password>Jc0i4rAjl78=</password>
+          <encoding>utf-8</encoding>
+        </jdbc>
+        <jdbc value="orcl251" desc="oracle">
+          <dbtype>oracle</dbtype>
+          <dbvender>ORACLE</dbvender>
+          <dbcatalog/>
+          <dburl>jdbc:oracle:thin:@192.168.1.2:11521:orcl251</dburl>
+          <dbowner>test</dbowner>
+          <dbhost>192.168.1.2</dbhost>
+          <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+          <dbuser>test</dbuser>
+          <password>Jc0i4rAjl78=</password>
+          <encoding>utf-8</encoding>
+        </jdbc>
+        <jdbc value="orcl251_2" desc="oracle">
+          <dbtype>oracle</dbtype>
+          <dbvender>ORACLE</dbvender>
+          <dbcatalog/>
+          <dburl>jdbc:oracle:thin:@192.168.1.2:11521:orcl251</dburl>
+          <dbowner>test#</dbowner>
+          <dbhost>192.168.1.2</dbhost>
+          <driverclass>oracle.jdbc.driver.OracleDriver</driverclass>
+          <dbuser>test#</dbuser>
+          <password>Jc0i4rAjl78=</password>
+          <encoding>utf-8</encoding>
+        </jdbc>
+      </jdbcs>  
+      <types>
+        <type value="test_s" desc="xulie" apptype="db">
+          <isactive>true</isactive>
+          <islocal>false</islocal>
+          <isrecover>true</isrecover>
+          <datapath>/data</datapath>
+          <deletefile>true</deletefile>
+          <plugin>
+            <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+            <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+            <sourceplugin>
+              <dbchange>
+                <database name="test_se_s" status="">
+                  <oldstep>false</oldstep>
+                  <operation>sequence</operation>
+                  <enable>true</enable>
+                  <temptable></temptable>
+                  <temptableold></temptableold>
+                  <maxrecords>100</maxrecords>
+                  <interval>10</interval>
+                  <istwoway>false</istwoway>
+                  <tables>
+                    <table value="test_sequence">
+                      <status/>
+                      <flag/>
+                      <monitordelete>false</monitordelete>
+                      <monitorupdate>false</monitorupdate>
+                      <monitorinsert>false</monitorinsert>
+                      <deletetrigger/>
+                      <inserttrigger/>
+                      <updatetrigger/>
+                      <seqnumber>1</seqnumber>
+                      <interval>12</interval>
+                      <fields>
+                        <field value="last_number">
+                          <JDBC_TYPE>NUMERIC</JDBC_TYPE>
+                          <IS_PK>true</IS_PK>
+                          <COLUMN_SIZE>9999</COLUMN_SIZE>
+                          <IS_NULL>false</IS_NULL>
+                          <DB_TYPE>NUMBER</DB_TYPE>
+                        </field>
+                      </fields>
+                    </table>
+                  </tables>
+                </database>
+              </dbchange>
+            </sourceplugin>
+            <targetplugin>
+              <dbchange>
+                <srcdb value="test_se_s">
+                  <tables>
+                    <srctable value="test_sequence">
+                      <targetdb value="test_se_t">
+                        <table value="test_sequence">
+                          <deleteenable>false</deleteenable>
+                          <onlyinsert>false</onlyinsert>
+                          <condition></condition>
+                          <fields>
+                            <field value="last_number">
+                              <JDBC_TYPE>NUMERIC</JDBC_TYPE>
+                              <IS_PK>true</IS_PK>
+                              <COLUMN_SIZE>9999</COLUMN_SIZE>
+                              <IS_NULL>false</IS_NULL>
+                              <DB_TYPE>NUMBER</DB_TYPE>
+                              <DESTFIELD>last_number</DESTFIELD>
+                            </field>
+                          </fields>
+                        </table>
+                      </targetdb>
+                    </srctable>
+                  </tables>
+                </srcdb>
+              </dbchange>
+            </targetplugin>
+          </plugin>
+        </type>
+        <type value="testspace" desc="testspace" apptype="db">
+          <isactive>true</isactive>
+          <islocal>false</islocal>
+          <isrecover>true</isrecover>
+          <datapath>/data</datapath>
+          <deletefile>true</deletefile>
+          <plugin>
+            <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+            <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+            <sourceplugin>
+              <dbchange>
+                <database name="orcl251" status="">
+                  <oldstep>false</oldstep>
+                  <operation>entirely</operation>
+                  <enable>true</enable>
+                  <temptable/>
+                  <temptableold/>
+                  <maxrecords>2</maxrecords>
+                  <interval>1</interval>
+                  <istwoway>false</istwoway>
+                  <tables>
+                    <table value="TESTSPACE0">
+                      <status/>
+                      <flag/>
+                      <monitordelete>false</monitordelete>
+                      <monitorupdate>false</monitorupdate>
+                      <monitorinsert>false</monitorinsert>
+                      <deletetrigger/>
+                      <inserttrigger/>
+                      <updatetrigger/>
+                      <seqnumber>1</seqnumber>
+                      <interval>12</interval>
+                      <fields>
+                        <field value="ID">
+                          <JDBC_TYPE>NUMERIC</JDBC_TYPE>
+                          <IS_PK>true</IS_PK>
+                          <COLUMN_SIZE>10</COLUMN_SIZE>
+                          <IS_NULL>false</IS_NULL>
+                          <DB_TYPE>NUMBER</DB_TYPE>
+                        </field>
+                        <field value="TEST1">
+                          <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                          <IS_PK>false</IS_PK>
+                          <COLUMN_SIZE>100</COLUMN_SIZE>
+                          <IS_NULL>true</IS_NULL>
+                          <DB_TYPE>VARCHAR2</DB_TYPE>
+                        </field>
+                        <field value="TEST2">
+                          <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                          <IS_PK>false</IS_PK>
+                          <COLUMN_SIZE>100</COLUMN_SIZE>
+                          <IS_NULL>true</IS_NULL>
+                          <DB_TYPE>VARCHAR2</DB_TYPE>
+                        </field>
+                        <field value="TEST3">
+                          <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                          <IS_PK>false</IS_PK>
+                          <COLUMN_SIZE>100</COLUMN_SIZE>
+                          <IS_NULL>true</IS_NULL>
+                          <DB_TYPE>VARCHAR2</DB_TYPE>
+                        </field>
+                        <field value="TEST4">
+                          <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                          <IS_PK>false</IS_PK>
+                          <COLUMN_SIZE>100</COLUMN_SIZE>
+                          <IS_NULL>true</IS_NULL>
+                          <DB_TYPE>VARCHAR2</DB_TYPE>
+                        </field>
+                        <field value="TEST5">
+                          <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                          <IS_PK>false</IS_PK>
+                          <COLUMN_SIZE>100</COLUMN_SIZE>
+                          <IS_NULL>true</IS_NULL>
+                          <DB_TYPE>VARCHAR2</DB_TYPE>
+                        </field>
+                        <field value="TEST6">
+                          <JDBC_TYPE>STRUCT</JDBC_TYPE>
+                          <IS_PK>false</IS_PK>
+                          <COLUMN_SIZE>1</COLUMN_SIZE>
+                          <IS_NULL>true</IS_NULL>
+                          <DB_TYPE>SDO_GEOMETRY</DB_TYPE>
+                        </field>
+                        <field value="TEST7">
+                          <JDBC_TYPE>TIMESTAMP</JDBC_TYPE>
+                          <IS_PK>true</IS_PK>
+                          <COLUMN_SIZE>11</COLUMN_SIZE>
+                          <IS_NULL>false</IS_NULL>
+                          <DB_TYPE>TIMESTAMP(6)</DB_TYPE>
+                        </field>
+                      </fields>
+                    </table>
+                  </tables>
+                </database>
+              </dbchange>
+            </sourceplugin>
+            <targetplugin>
+              <dbchange>
+                <srcdb value="orcl251">
+                  <tables>
+                    <srctable value="TESTSPACE0">
+                      <targetdb value="orcl251_2">
+                        <table value="TESTSPACE">
+                          <deleteenable>false</deleteenable>
+                          <onlyinsert>false</onlyinsert>
+                          <condition></condition>
+                          <fields>
+                            <field value="ID">
+                              <JDBC_TYPE>NUMERIC</JDBC_TYPE>
+                              <IS_PK>true</IS_PK>
+                              <COLUMN_SIZE>10</COLUMN_SIZE>
+                              <IS_NULL>false</IS_NULL>
+                              <DB_TYPE>NUMBER</DB_TYPE>
+                              <DESTFIELD>ID</DESTFIELD>
+                            </field>
+                            <field value="TEST1">
+                              <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                              <IS_PK>false</IS_PK>
+                              <COLUMN_SIZE>100</COLUMN_SIZE>
+                              <IS_NULL>true</IS_NULL>
+                              <DB_TYPE>VARCHAR2</DB_TYPE>
+                              <DESTFIELD>TEST1</DESTFIELD>
+                            </field>
+                            <field value="TEST2">
+                              <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                              <IS_PK>false</IS_PK>
+                              <COLUMN_SIZE>100</COLUMN_SIZE>
+                              <IS_NULL>true</IS_NULL>
+                              <DB_TYPE>VARCHAR2</DB_TYPE>
+                              <DESTFIELD>TEST2</DESTFIELD>
+                            </field>
+                            <field value="TEST3">
+                              <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                              <IS_PK>false</IS_PK>
+                              <COLUMN_SIZE>100</COLUMN_SIZE>
+                              <IS_NULL>true</IS_NULL>
+                              <DB_TYPE>VARCHAR2</DB_TYPE>
+                              <DESTFIELD>TEST3</DESTFIELD>
+                            </field>
+                            <field value="TEST4">
+                              <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                              <IS_PK>false</IS_PK>
+                              <COLUMN_SIZE>100</COLUMN_SIZE>
+                              <IS_NULL>true</IS_NULL>
+                              <DB_TYPE>VARCHAR2</DB_TYPE>
+                              <DESTFIELD>TEST4</DESTFIELD>
+                            </field>
+                            <field value="TEST5">
+                              <JDBC_TYPE>VARCHAR</JDBC_TYPE>
+                              <IS_PK>false</IS_PK>
+                              <COLUMN_SIZE>100</COLUMN_SIZE>
+                              <IS_NULL>true</IS_NULL>
+                              <DB_TYPE>VARCHAR2</DB_TYPE>
+                              <DESTFIELD>TEST5</DESTFIELD>
+                            </field>
+                            <field value="TEST6">
+                              <JDBC_TYPE>STRUCT</JDBC_TYPE>
+                              <IS_PK>false</IS_PK>
+                              <COLUMN_SIZE>1</COLUMN_SIZE>
+                              <IS_NULL>true</IS_NULL>
+                              <DB_TYPE>SDO_GEOMETRY</DB_TYPE>
+                              <DESTFIELD>TEST6</DESTFIELD>
+                            </field>
+                            <field value="TEST7">
+                              <JDBC_TYPE>TIMESTAMP</JDBC_TYPE>
+                              <IS_PK>true</IS_PK>
+                              <COLUMN_SIZE>11</COLUMN_SIZE>
+                              <IS_NULL>false</IS_NULL>
+                              <DB_TYPE>TIMESTAMP(6)</DB_TYPE>
+                              <DESTFIELD>TEST7</DESTFIELD>
+                            </field>
+                          </fields>
+                        </table>
+                      </targetdb>
+                    </srctable>
+                  </tables>
+                </srcdb>
+              </dbchange>
+            </targetplugin>
+          </plugin>
+        </type>
+         <type value="db_1_1" desc="dd" apptype="dbOneLine">
+          <isactive>true</isactive>
+          <islocal>false</islocal>
+          <isrecover>true</isrecover>
+          <datapath>/data</datapath>
+          <deletefile>true</deletefile>
+          <plugin>
+            <sourceclassname>com.inetec.ichange.plugin.dbchange.DbChangeSource</sourceclassname>
+            <targetclassname>com.inetec.ichange.plugin.dbchange.DbChangeTarget</targetclassname>
+            <sourceplugin>
+              <dbchange>
+                <database name="orcl251" status="">
+                  <oldstep>false</oldstep>
+                  <operation>entirely</operation>
+                  <enable>true</enable>
+                  <temptable></temptable>
+                  <temptableold></temptableold>
+                  <maxrecords>200</maxrecords>
+                  <interval>1</interval>
+                  <istwoway>false</istwoway>
+                  <tables/>
+                </database>
+              </dbchange>
+            </sourceplugin>
+            <targetplugin>
+              <dbchange>
+                <srcdb value="orcl251">
+                  <tables/>
+                </srcdb>
+              </dbchange>
+            </targetplugin>
+          </plugin>
+        </type>
+      </types>
+      <channel> 
+        <type>https</type>  
+        <ipaddress>192.168.7.100</ipaddress>  
+        <privated>false</privated>  
+        <targetpath>/usr/app/ichange/dest</targetpath>  
+        <port>8060</port>  
+        <sourcepath>/usr/app/ichange/srcs</sourcepath>  
+        <interval>1000</interval> 
+      </channel>  
+      <ichangeutils> 
+        <gcinterval>10</gcinterval>  
+        <recover>10</recover>  
+        <systemmeantime>300</systemmeantime>  
+        <logserverport>8090</logserverport>  
+        <restarttime/>  
+        <logserveruser/>  
+        <logserverpassword/>  
+        <logsmaxsize>2</logsmaxsize>  
+        <logsmaxday>1</logsmaxday> 
+      </ichangeutils> 
+    </ichange> 
+  </system> 
+</configuration>

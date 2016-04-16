@@ -1,0 +1,18 @@
+<?Exml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE preferences SYSTEM 'http://java.sun.com/dtd/preferences.dtd'>
+<preferences EExTERNAL_ExML_VERSION="1.0">
+    <root type="system">
+        <map/>
+             <node name="jdbc">
+                <map>
+                  <entry key="dbServerVender" value="ORACLE"/>
+                  <entry key="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
+                  <entry key="driverUrl" value="jdbc:oracle:thin:@10.71.0.50:1521:engsvr01"/>
+                  <entry key="dbHost" value="engsvr01"/>
+                  <entry key="dbName" value="dbsync2"/>
+                  <entry key="dbUser" value="dbsync2"/>
+                  <entry key="password" value="dbsync2"/>
+                </map>
+             </node>
+    </root>
+</preferences>

@@ -1,0 +1,193 @@
+<?Exml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE preferences SYSTEM 'http://java.sun.com/dtd/preferences.dtd'>
+<preferences EExTERNAL_ExML_VERSION="1.0">
+    <root type="system">
+        <map/>
+        <node name="datacollection">
+            <map/>
+            <node name="systemsupport">
+                <map/>
+                <node name="datarecover">
+                    <map>
+                        <entry key="autoRecover" value="true"/>
+                        <entry key="startTime" value="12:00:00"/>
+                    </map>
+                </node>
+                <node name="jdbc">
+                    <map>
+                        <entry key="dbServerVender" value="mysql"/>
+                        <entry key="driverClass" value="org.gjt.mm.mysql.Driver"/>
+                        <entry key="driverUrl" value="jdbc:mysql://192.168.0.22:3306/recover"/>
+                        <entry key="dbHost" value="eng-019"/>
+                        <entry key="dbName" value="recover"/>
+                        <entry key="dbUser" value="root"/>
+                        <entry key="password" value=""/>
+                    </map>
+                </node>
+            </node>
+            <node name="types">
+                <map/>
+                <node name="tr">
+                    <map/>
+                    <node name="ioadapter">
+                        <map/>
+                        <node name="inputadapter">
+                            <map>
+                                <entry key="classname" value="com.inetec.ichange.plugin.dbchange.DbChangeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSourcegeSource"/>
+                            </map>
+                            <node name="config">
+                                <map/>
+                                <node name="dbsync">
+                                    <map/>
+                                    <node name="DBSYNC1">
+                                        <map>
+                                            <entry key="interval" value="1"/>
+                                            <entry key="enable" value="true"/>
+                                            <entry key="maExrecords" value="100"/>
+                                            <entry key="dbtype" value="oracle"/>
+                                            <entry key="delete" value="false"/>
+                                            <entry key="specifyflag" value="false"/>
+                                            <entry key="triggerenable" value="false"/>
+                                            <entry key="oldstep" value="true"/>
+                                        </map>
+                                        <node name="tables">
+                                            <map/>
+                                            <node name="TEST1">
+                                                <map>
+                                                  <entry key="delete" value="false"/>
+                                                  <entry key="specifyflag" value="false"/>
+                                                  <entry key="triggerenable" value="false"/>
+                                                  <entry key="specifyfields" value="false"/>
+                                                  <entry key="sequence" value="1"/>
+                                                  <entry key="monitorinsert" value="false"/>
+                                                  <entry key="monitorupdate" value="false"/>
+                                                  <entry key="monitordelete" value="false"/>
+                                                </map>
+                                                <node name="fields">
+                                                  <map/>
+                                                  <node name="id">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="id"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="TRUE"/>
+                                                  <entry key="IS_NULLABLE" value="FALSE"/>
+                                                  <entry key="JDBC_TYPE" value="BIGINT"/>
+                                                  <entry key="DB_TYPE" value="bigint"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="Name">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="Name"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="CHAR"/>
+                                                  <entry key="DB_TYPE" value="char"/>
+                                                  </map>
+                                                  </node>
+                                                </node>
+                                            </node>
+                                        </node>
+                                        <node name="jdbc">
+                                            <map>
+                                                <entry key="dbServerVender" value="ORACLE"/>
+                                                <entry key="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
+                                                <entry key="driverUrl" value="jdbc:oracle:thin:@10.71.0.50:1521:engsvr01"/>
+                                                <entry key="dbHost" value="engsvr01"/>
+                                                <entry key="dbName" value="dbsync1"/>
+                                                <entry key="dbUser" value="dbsync1"/>
+                                                <entry key="password" value="dbsync1"/>
+                                            </map>
+                                        </node>
+                                    </node>
+                                </node>
+                            </node>
+                        </node>
+                        <node name="outputadapter">
+                            <map>
+                                <entry key="classname" value="com.inetec.ichange.plugin.dbchange.DbChangeTarget"/>
+                            </map>
+                            <node name="config">
+                                <map/>
+                                <node name="dbsync">
+                                    <map/>
+                                    <node name="DBSYNC1">
+                                        <map>
+                                            <entry key="enable" value="true"/>
+                                        </map>
+                                        <node name="tables">
+                                            <map/>
+                                            <node name="TEST1">
+                                                <map/>
+                                                <node name="DBSYNC2">
+                                                  <map/>
+                                                  <node name="TEST2">
+                                                  <map>
+                                                  <entry key="deleteenable" value="true"/>
+                                                  <entry key="onlyinsert" value="true"/>
+                                                  <entry key="specifyfields" value="true"/>
+                                                  </map>
+                                                  <node name="fields">
+                                                  <map/>
+                                                  <node name="ID">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="ID"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="TRUE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="NUMERIC"/>
+                                                  <entry key="DB_TYPE" value="NUMBER"/>
+                                                  </map>
+                                                  </node>
+                                                  <node name="NAME">
+                                                  <map>
+                                                  <entry key="DESTFIELD" value="NAME"/>
+                                                  <entry key="LABEL" value=""/>
+                                                  <entry key="COLUMN_SIZE" value="6"/>
+                                                  <entry key="QUERYSQL" value=""/>
+                                                  <entry key="IS_PK" value="FALSE"/>
+                                                  <entry key="IS_NULLABLE" value="TRUE"/>
+                                                  <entry key="JDBC_TYPE" value="VARCHAR"/>
+                                                  <entry key="DB_TYPE" value="VARCHAR2"/>
+                                                  </map>
+                                                  </node>
+                                                  </node>
+                                                  </node>
+                                                </node>
+                                            </node>
+                                        </node>
+                                    </node>
+                                    <node name="targetdatabases">
+                                        <map/>
+                                        <node name="DBSYNC2">
+                                            <map>
+                                                <entry key="triggerenable" value="false"/>
+                                            </map>
+                                            <node name="jdbc">
+                                                <map>
+                                                  <entry key="dbServerVender" value="ORACLE"/>
+                                                  <entry key="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
+                                                  <entry key="driverUrl" value="jdbc:oracle:thin:@10.71.0.50:1521:engsvr01"/>
+                                                  <entry key="dbHost" value="engsvr01"/>
+                                                  <entry key="dbName" value="dbsync2"/>
+                                                  <entry key="dbUser" value="dbsync2"/>
+                                                  <entry key="password" value="dbsync2"/>
+                                                </map>
+                                            </node>
+                                        </node>
+                                    </node>
+                                </node>
+                            </node>
+                        </node>
+                    </node>
+                </node>
+            </node>
+        </node>
+    </root>
+</preferences>

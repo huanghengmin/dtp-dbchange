@@ -1,0 +1,27 @@
+Version=IChangeData1.0
+LobDataCount=2;
+LobDataPosition-1=100;
+LobDataPosition-2=200;
+LobDataLength-1=1000;
+LobDataLength-2=2000;
+
+
+TableName=T_DBSYNC
+DataType=Basic
+Length=432
+Data_Type=Basic
+SchemaName=dbsync
+
+<?Exml version="1.1" encoding="utf-8"?>
+<rows><row delete="false" schema="dbsync" table="T_DBSYNC"><column dbtype="DATE" isnull="false" ispk="false" jdbctype="DATE" name="T_DATE">"2005-09-12 00:00:00.0"</column><column dbtype="VARCHAR2" isnull="false" ispk="true" jdbctype="VARCHAR" name="T_VARCHAR">"1126530364926_648"</column><column dbtype="NUMBER" isnull="false" ispk="false" jdbctype="NUMERIC" name="T_ID">"648"</column></row></rows>
+
+
+pks=T_VARCHAR;VARCHAR;1126530364926_648;
+TableName=T_DBSYNC
+Length=29
+SchemaName=dbsync
+Data_Type=Blob
+FieldName=T_BLOB
+
+
+#######blob of pk_648#######
